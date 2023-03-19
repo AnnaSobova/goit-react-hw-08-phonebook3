@@ -10,8 +10,8 @@ const InputPassword = ({ onChange, value }) => (
       placeholder="Enter password"
       onChange={onChange}
       value={value}
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-      title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"
+      // pattern="(?=.*\d)(?=.*[a-z]).{4,}"
+      // title="Must contain at least one number and one uppercase and lowercase letter, and at least 4 or more characters"
     />
   );
   
