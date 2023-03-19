@@ -2,7 +2,7 @@ import SharedLayout from './SharedLayout/SharedLayout';
 import Home from '../pages/Home';
 import ContactsPage from '../pages/Contacts';
 import Register from './Register/Register';
-import LogIn from './LogIn/LogIn';
+import LogIn from './Login/LogIn1';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import authOperation from '../redux/auth/authOperation';
 import { useDispatch } from 'react-redux';
