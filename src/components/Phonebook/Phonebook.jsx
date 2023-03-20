@@ -18,7 +18,6 @@ const Phonebook = () => {
   const contacts = useSelector(state => state.contacts.items);
   const isLoad = useSelector(state => state.contacts.isLoad);
 
-
   const handleChange = e => {
     switch (e.currentTarget.name) {
       case 'name':
@@ -38,13 +37,11 @@ const Phonebook = () => {
   };
 
   const formSubmitHandle = data => {
-    
-    if (contacts.filter(contact => contact.name.toLowerCase() === data.name.toLowerCase()).length > 0) {
+    if (contacts.filter(contact => contact.name === data.name).length > 0) {
       Notiflix.Notify.warning(`${data.name} is already in contacts`);
       return;
     }
     dispatch(contactsOperation.addContact(data));
-    
   };
 
   const clickOnBtnSubmit = async e => {
@@ -69,7 +66,7 @@ const Phonebook = () => {
         disabled={isLoad}
       >
         Add
-        </Button>
+      </Button>
     </FormPhonebook>
   );
 };

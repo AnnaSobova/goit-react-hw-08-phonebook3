@@ -20,7 +20,6 @@ const register = createAsyncThunk('auth/register', async credentials => {
     return data;
   } catch (error) {
     Notify.failure('Ошибка создания пользователя');
-    
   }
 });
 

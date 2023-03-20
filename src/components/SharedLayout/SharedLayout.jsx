@@ -35,5 +35,4 @@ import {
       </Container>
     );
   };
-  
   export default SharedLayout;

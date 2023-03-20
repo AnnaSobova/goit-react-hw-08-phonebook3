@@ -11,18 +11,18 @@ const InputFilter = () => {
   const handleChange = e => {
     dispatch(filterContacts(e.currentTarget.value));
   };
-  return(
-     <>
-    <Input
-      type="text"
-      name="filter"
-      placeholder="Find contact"
-      onChange={handleChange}
-      value={filter}
-    />
-  </>
-  )
-}
+  return (
+    <>
+      <Input
+        type="text"
+        name="filter"
+        placeholder="Find contact"
+        onChange={handleChange}
+        value={filter}
+      />
+    </>
+  );
+};
 
 export default InputFilter;
 
