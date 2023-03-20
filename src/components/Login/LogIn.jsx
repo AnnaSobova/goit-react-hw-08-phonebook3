@@ -25,15 +25,25 @@ const LogIn = () => {
     }
   };
 
-  const resetForm = () => {
-    setEmail('');
-    setPassword('');
-  };
+  // const resetForm = () => {
+  //   setEmail('');
+  //   setPassword('');
+  // };
+
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  //   dispatch(authOperation.logIn({ email, password }));
+  //   resetForm();
+  // };
 
   const handleSubmit = e => {
     e.preventDefault();
+    if (email.trim() === '' || password.trim() === '') {
+      return;
+    }
     dispatch(authOperation.logIn({ email, password }));
-    resetForm();
+    setEmail('');
+    setPassword('');
   };
 
   return (
