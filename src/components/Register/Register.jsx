@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import authOperation from 'redux/auth/authOperation';
 import Button from '@mui/material/Button';
-import { TailSpin } from 'react-loader-spinner';
+// import { TailSpin } from 'react-loader-spinner';
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -64,20 +64,7 @@ const Register = () => {
         className="button-signup"
         disabled={isLoad}
       >
-        {isLoad ? (
-          <TailSpin
-            height="20"
-            width="20"
-            color="#ff4500"
-            ariaLabel="tail-spin-loading"
-            radius="1"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-          />
-        ) : (
-          'Sign up'
-        )}
+        Sign up
       </Button>
     </FormStyled>
   );

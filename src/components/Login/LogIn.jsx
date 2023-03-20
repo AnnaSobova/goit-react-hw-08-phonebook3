@@ -77,5 +77,4 @@ const LogIn = () => {
     </FormStyled>
   );
 };
-
 export default LogIn;
