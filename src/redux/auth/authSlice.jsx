@@ -13,9 +13,11 @@ export const authSlice = createSlice({
   initialState,
   extraReducers: {
     [authOperation.register.fulfilled](state, action) {
-      state.user = action.payload.user;
+      if (action.payload){
+        state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
+      }
       state.isLoad = false;
     },
     [authOperation.register.pending](state) {
@@ -25,9 +27,11 @@ export const authSlice = createSlice({
       state.isLoad = false;
     },
     [authOperation.logIn.fulfilled](state, action) {
-      state.user = action.payload.user;
+      if (action.payload){
+        state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
+      }
       state.isLoad = false;
     },
     [authOperation.logIn.pending](state) {
@@ -49,8 +53,10 @@ export const authSlice = createSlice({
       state.isLoad = false;
     },
     [authOperation.fetchCurrentUser.fulfilled](state, action) {
-      state.user = action.payload;
+      if (action.payload){
+        state.user = action.payload;
       state.isLoggedIn = true;
+      }
       state.isLoad = false;
     },
     [authOperation.fetchCurrentUser.pending](state) {

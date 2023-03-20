@@ -42,8 +42,8 @@ const LogIn = () => {
       return;
     }
     dispatch(authOperation.logIn({ email, password }));
-    setEmail('');
-    setPassword('');
+    // setEmail('');
+    // setPassword('');
   };
 
   return (

@@ -40,7 +40,7 @@ const Register = () => {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(authOperation.register({ name, email, password }));
-    resetForm();
+    
   };
 
   return (
