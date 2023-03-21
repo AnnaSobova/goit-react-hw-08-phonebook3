@@ -31,11 +31,11 @@ const Register = () => {
     }
   };
 
-  const resetForm = () => {
-    setName('');
-    setEmail('');
-    setPassword('');
-  };
+  // const resetForm = () => {
+  //   setName('');
+  //   setEmail('');
+  //   setPassword('');
+  // };
 
   const handleSubmit = e => {
     e.preventDefault();
